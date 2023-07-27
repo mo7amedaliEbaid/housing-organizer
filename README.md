@@ -1,4 +1,4 @@
-# fashion_app
+# Housing Organiser
 
 A new Flutter project.
 
