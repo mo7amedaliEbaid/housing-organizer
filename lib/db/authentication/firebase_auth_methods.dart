@@ -32,7 +32,7 @@ class FirebaseAuthMethods {
         .get()
         .catchError(
       (onError) {
-        print(onError);
+        throw Exception(onError);
       },
     );
 
@@ -96,7 +96,6 @@ class FirebaseAuthMethods {
     required String lastName,
     required String phoneNumber,
     required String address,
-    //required String cnic,
     required String country,
     required String age,
     required String gender,
@@ -117,7 +116,6 @@ class FirebaseAuthMethods {
         age: age,
         gender: gender,
         country: country,
-        //cnic: cnic,
         phoneNo: phoneNumber,
         // cart: cart!,
       );

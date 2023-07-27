@@ -57,8 +57,8 @@ class _formState extends State<form> {
   String _genderMale = "male";
   double _age = 0;
 
-  var countries = ["Pakistan", "India", "China", "Afghanistan", "others"];
-  String? selectedCountry = "Pakistan";
+  var countries = ["Egypt", "Emirates", "Saudi Arabia", "Jordan", "others"];
+  String? selectedCountry = "Egypt";
   bool isLoading = false;
   @override
   Widget build(BuildContext context) {
@@ -72,7 +72,6 @@ class _formState extends State<form> {
         lastName: _userLastNameController.text,
         phoneNumber: _userPhoneNumberController.text,
         address: _userAddressController.text,
-        //cnic: _userCNICController.text,
         country: selectedCountry.toString(),
         age: _age.toString(),
         gender: _genderMale.toString(),
@@ -218,27 +217,6 @@ class _formState extends State<form> {
               press: () {},
             ),
           ),
-         /* SizedBox(
-            height: 8.h,
-          ),
-          customTextFieldLable(
-            isRequired: true,
-            lableText: "C N I C",
-          ),*/
-          /*SizedBox(
-            height: 8.h,
-          ),
-          TextFormField(
-            controller: _userCNICController,
-            validator: cnicValidator,
-            keyboardType: TextInputType.number,
-            textInputAction: TextInputAction.next,
-            decoration: customInputDecoration(
-              suffixIcon: null,
-              hintText: "*****-*******-*",
-              press: () {},
-            ),*/
-        //  ),
           SizedBox(
             height: 8.h,
           ),

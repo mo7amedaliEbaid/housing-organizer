@@ -7,7 +7,6 @@ class UserCreaditials {
   final String?email;
   final String?phoneNo;
   final String?address;
- // final String?cnic;
   final String?gender;
   final String?age;
   final String?country;
@@ -25,7 +24,6 @@ class UserCreaditials {
     required this.gender,
     required this.age,
     required this.country,
-    //required this.cnic,
     //required this.cart,
   });
   // converting it to the map object
@@ -36,7 +34,6 @@ class UserCreaditials {
         "email": email,
         "uid": uid,
         "address": address,
-       // "cnic": cnic,
         "phoneNo": phoneNo,
         "gender": gender,
         "age": age,
@@ -53,7 +50,6 @@ class UserCreaditials {
       lastName: snapshot['lastName'],
       address: snapshot['address'],
       age: snapshot['age'],
-      //cnic: snapshot['cnic'],
       country: snapshot['country'],
       gender: snapshot['gender'],
       phoneNo: snapshot['phoneNo'],
