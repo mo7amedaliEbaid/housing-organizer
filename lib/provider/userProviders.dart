@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 
-import '../db/authentication/firebase_auth_methods.dart';
+import '../services/firebase_auth_methods.dart';
 import '../models/users.dart';
 
 class UserProviders extends ChangeNotifier {

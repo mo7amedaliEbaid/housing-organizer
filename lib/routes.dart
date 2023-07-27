@@ -1,13 +1,13 @@
-import 'package:fashion_app/signin/signin.dart';
-import 'package:fashion_app/signup/signup.dart';
-import 'package:fashion_app/smsOTP/forgotPassword.dart';
-import 'package:fashion_app/splashScreen/splashscreen.dart';
-import 'package:flutter/material.dart';
 
-import 'feed/feedScreen.dart';
-import 'forgot/forgotPassword.dart';
-import 'home/home.dart';
-import 'lottie/splash.dart';
+import 'package:fashion_app/ui/screens/feed/feedScreen.dart';
+import 'package:fashion_app/ui/screens/forgot/forgotPassword.dart';
+import 'package:fashion_app/ui/screens/home/home.dart';
+import 'package:fashion_app/ui/screens/lottie/splash.dart';
+import 'package:fashion_app/ui/screens/signin/signin.dart';
+import 'package:fashion_app/ui/screens/signup/signup.dart';
+import 'package:fashion_app/ui/screens/smsOTP/forgotPassword.dart';
+import 'package:fashion_app/ui/screens/splashScreen/splashscreen.dart';
+import 'package:flutter/material.dart';
 
 final Map<String, WidgetBuilder> routes = {
   Lottie.routeName: (context) => Lottie(),
