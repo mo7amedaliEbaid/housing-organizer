@@ -23,28 +23,28 @@ final Map<AppTheme, ThemeData> appThemeData = {
           fontSize: 32.sp,
           color: kDarkTextColor,
         ),
-        headline3: TextStyle(
+        displaySmall: TextStyle(
           fontSize: 24.sp,
           color: kDarkTextColor,
           fontWeight: FontWeight.bold,
         ),
-        headline4: TextStyle(
+        headlineMedium: TextStyle(
           fontSize: 24.sp,
           color: kDarkTextColor,
         ),
-        headline5: TextStyle(
+        headlineSmall: TextStyle(
           fontSize: 20.sp,
           color: kDarkTextColor,
         ),
-        headline6: TextStyle(
+        titleLarge: TextStyle(
           fontSize: 16.sp,
           color: kDarkTextColor,
         ),
-        bodyText1: TextStyle(
+        bodyLarge: TextStyle(
           fontSize: 12.sp,
           color: kDarkTextColor,
         ),
-        bodyText2: TextStyle(
+        bodyMedium: TextStyle(
           fontSize: 14.sp,
           color: kDarkTextColor,
         ),
