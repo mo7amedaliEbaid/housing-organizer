@@ -18,6 +18,7 @@ class _WishListScreenState extends State<WishListScreen> {
   final TextEditingController _commentTextEditingController =
       TextEditingController();
   bool isPostedComment = false;
+
   @override
   void dispose() {
     // TODO: implement dispose
