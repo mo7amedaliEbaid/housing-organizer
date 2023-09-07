@@ -1,4 +1,4 @@
-import 'package:fashion_app/ui/widgets/suffixIcon.dart';
+import '../widgets/suffixIcon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

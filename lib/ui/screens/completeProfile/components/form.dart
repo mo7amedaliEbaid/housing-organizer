@@ -1,8 +1,7 @@
 import 'dart:typed_data';
 
-import 'package:fashion_app/ui/screens/feed/feedScreen.dart';
-import 'package:fashion_app/ui/screens/home/home.dart';
-import 'package:fashion_app/ui/widgets/imagepicker.dart';
+import '../../../screens/feed/feedScreen.dart';
+import '../../../widgets/imagepicker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

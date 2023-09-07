@@ -1,5 +1,5 @@
-import 'package:fashion_app/ui/screens/home/components/productHeading.dart';
-import 'package:fashion_app/ui/screens/yourlocation/yourlocation.dart';
+import '../../../screens/home/components/productHeading.dart';
+import '../../../screens/yourlocation/yourlocation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

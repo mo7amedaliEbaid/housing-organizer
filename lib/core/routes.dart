@@ -1,10 +1,10 @@
 
-import 'package:fashion_app/ui/screens/feed/feedScreen.dart';
-import 'package:fashion_app/ui/screens/forgot/forgotPassword.dart';
-import 'package:fashion_app/ui/screens/home/home.dart';
-import 'package:fashion_app/ui/screens/lottie/splash.dart';
-import 'package:fashion_app/ui/screens/smsOTP/forgotPassword.dart';
-import 'package:fashion_app/ui/screens/splashScreen/splashscreen.dart';
+import '../ui/screens/feed/feedScreen.dart';
+import '../ui/screens/forgot/forgotPassword.dart';
+import '../ui/screens/home/home.dart';
+import '../ui/screens/lottie/splash.dart';
+import '../ui/screens/smsOTP/forgotPassword.dart';
+import '../ui/screens/splashScreen/splashscreen.dart';
 import 'package:flutter/material.dart';
 
 import '../ui/screens/signinscreen/signin.dart';

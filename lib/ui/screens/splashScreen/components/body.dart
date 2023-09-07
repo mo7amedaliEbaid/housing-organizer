@@ -1,6 +1,6 @@
 
-import 'package:fashion_app/ui/screens/splashScreen/components/splashstats.dart';
-import 'package:fashion_app/ui/screens/splashScreen/components/splastDots.dart';
+import '../../../screens/splashScreen/components/splashstats.dart';
+import '../../../screens/splashScreen/components/splastDots.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

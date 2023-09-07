@@ -1,9 +1,9 @@
-import 'package:fashion_app/provider/userProviders.dart';
-import 'package:fashion_app/core/routes.dart';
-import 'package:fashion_app/ui/screens/feed/feedScreen.dart';
-import 'package:fashion_app/ui/screens/lottie/splash.dart';
-import 'package:fashion_app/ui/screens/signupscreen/signup.dart';
-import 'package:fashion_app/ui/widgets/customSnakeBar.dart';
+import '../provider/userProviders.dart';
+import '../core/routes.dart';
+import '../ui/screens/feed/feedScreen.dart';
+import '../ui/screens/lottie/splash.dart';
+import '../ui/screens/signupscreen/signup.dart';
+import '../ui/widgets/customSnakeBar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
