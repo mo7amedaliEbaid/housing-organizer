@@ -10,6 +10,3 @@ A Flutter App for organizing real estates selling and renting, The user can make
 
 Firebase
 
-### Design Pattern
-
-MVVM
