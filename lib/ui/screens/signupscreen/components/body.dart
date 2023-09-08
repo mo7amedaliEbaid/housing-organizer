@@ -1,11 +1,13 @@
-import '../../..//screens/signinscreen/signin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../widgets/footer.dart';
 import '../../../widgets/sociallinks.dart';
 import '../../forgot/forgotPassword.dart';
-import '../../signupscreen/components/form.dart';
+import '../../signinscreen/components/form.dart';
+import '../../signinscreen/signin.dart';
+
+
 
 
 class Body extends StatelessWidget {

@@ -1,16 +1,17 @@
-import '../provider/userProviders.dart';
-import '../core/routes.dart';
-import '../ui/screens/feed/feedScreen.dart';
-import '../ui/screens/lottie/splash.dart';
-import '../ui/screens/signupscreen/signup.dart';
-import '../ui/widgets/customSnakeBar.dart';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:housing_organizer/provider/userProviders.dart';
+import 'package:housing_organizer/ui/screens/feed/feedScreen.dart';
+import 'package:housing_organizer/ui/screens/lottie/splash.dart';
+import 'package:housing_organizer/ui/screens/signupscreen/signup.dart';
+import 'package:housing_organizer/ui/widgets/customSnakeBar.dart';
 
 import 'package:provider/provider.dart';
+import 'core/routes.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
           ],
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'First Method',
+            title: 'Housing Organizer',
             initialRoute: Lottie.routeName,
             routes: routes,
             theme: ThemeData.light(),

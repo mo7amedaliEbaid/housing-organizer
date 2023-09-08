@@ -6,6 +6,7 @@ import 'package:geolocator/geolocator.dart';
 
 import '../../../core/constants.dart';
 
+
 class GeolocatorWidget extends StatefulWidget {
   const GeolocatorWidget({Key? key}) : super(key: key);
 
