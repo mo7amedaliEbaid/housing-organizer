@@ -3,6 +3,7 @@ import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:housing_organizer/ui/screens/map/map_screen.dart';
 
 import '../../../core/constants.dart';
 
@@ -94,6 +95,12 @@ class _GeolocatorWidgetState extends State<GeolocatorWidget> {
           FloatingActionButton(
             child: const Icon(Icons.bookmark),
             onPressed: _getLastKnownPosition,
+          ),
+          FloatingActionButton(
+            child: const Icon(Icons.map),
+            onPressed: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MapScreen(latitude:31, longitude: 31)));
+            },
           ),
         ],
       ),

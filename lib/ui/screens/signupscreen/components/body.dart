@@ -4,14 +4,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../widgets/footer.dart';
 import '../../../widgets/sociallinks.dart';
 import '../../forgot/forgotPassword.dart';
-import '../../signinscreen/components/form.dart';
+import '../../signupscreen/components/form.dart';
 import '../../signinscreen/signin.dart';
 
 
 
 
-class Body extends StatelessWidget {
-  const Body({Key? key}) : super(key: key);
+class SignupBody extends StatelessWidget {
+  const SignupBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

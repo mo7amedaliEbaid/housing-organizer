@@ -23,7 +23,7 @@ class _MapScreenState extends State<MapScreen> {
   void initState() {
     kGooglePlex = CameraPosition(
       target: LatLng(widget.latitude, widget.longitude),
-      zoom: 10.4746,
+      zoom: 16.4746,
     );
     super.initState();
   }
