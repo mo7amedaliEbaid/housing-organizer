@@ -59,6 +59,7 @@ dependencies:
   firebase_messaging:
   flutter_local_notifications:
   http:
+  google_maps_flutter:
 
 dev_dependencies:
   flutter_test:
