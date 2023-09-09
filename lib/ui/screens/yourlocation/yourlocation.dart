@@ -99,7 +99,7 @@ class _GeolocatorWidgetState extends State<GeolocatorWidget> {
           FloatingActionButton(
             child: const Icon(Icons.map),
             onPressed: (){
-              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MapScreen(latitude:31, longitude: 31)));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MapScreen(/*latitude:31, longitude: 31*/)));
             },
           ),
         ],

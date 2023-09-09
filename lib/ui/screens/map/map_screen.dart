@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import '../../../models/map_style.dart';
@@ -6,10 +7,10 @@ import '../../../secret.dart';
 
 
 class MapScreen extends StatefulWidget {
-  MapScreen({Key? key, required this.latitude, required this.longitude})
+  MapScreen({Key? key,/* required this.latitude, required this.longitude*/})
       : super(key: key);
-  final double latitude;
-  final double longitude;
+ // final double latitude;
+ // final double longitude;
 
   @override
   State<MapScreen> createState() => _MapScreenState();
@@ -18,12 +19,22 @@ class MapScreen extends StatefulWidget {
 class _MapScreenState extends State<MapScreen> {
   GoogleMapController? _controller;
   late CameraPosition kGooglePlex;
-
+  List<double> coordinates=[31,31];
+  Future<List<double>> getLocation() async {
+    Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.low);
+    print(position.latitude);
+    print(position.longitude);
+    setState(() {
+      coordinates=[position.latitude,position.longitude] ;
+    });
+    return coordinates;
+  }
   @override
   void initState() {
+    getLocation();
     kGooglePlex = CameraPosition(
-      target: LatLng(widget.latitude, widget.longitude),
-      zoom: 16.4746,
+      target: LatLng(coordinates.first, coordinates.last),
+      zoom: 10.4746,
     );
     super.initState();
   }
