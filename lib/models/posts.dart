@@ -20,7 +20,8 @@ class UserPost {
   final postId;
   final datePublished;
   final postURL;
-
+ final latitude;
+ final longitude;
   final likes;
   // creating the constructor here...
   UserPost({
@@ -40,6 +41,8 @@ class UserPost {
     required this.overview,
     required this.price,
     required this.rooms,
+    required this.latitude,
+    required this.longitude,
     required this.sqft,
   });
   // converting it to the map object
@@ -60,6 +63,8 @@ class UserPost {
         "datePublished": datePublished,
         "likes": likes,
         "postURL": postURL,
+    "lat":latitude,
+    "long":longitude,
         "uid": FirebaseAuth.instance.currentUser!.uid,
       };
   static UserPost fromSnap(DocumentSnapshot documentSnapshot) {
@@ -82,6 +87,8 @@ class UserPost {
       price: snapshot['price'],
       rooms: snapshot['rooms'],
       title: snapshot['title'],
+      latitude:snapshot['lat'],
+      longitude: snapshot['long'] ,
     );
   }
 }

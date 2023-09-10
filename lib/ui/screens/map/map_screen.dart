@@ -7,10 +7,10 @@ import '../../../secret.dart';
 
 
 class MapScreen extends StatefulWidget {
-  MapScreen({Key? key,/* required this.latitude, required this.longitude*/})
+  MapScreen({Key? key, required this.latitude, required this.longitude})
       : super(key: key);
- // final double latitude;
- // final double longitude;
+  final double latitude;
+ final double longitude;
 
   @override
   State<MapScreen> createState() => _MapScreenState();
@@ -19,7 +19,7 @@ class MapScreen extends StatefulWidget {
 class _MapScreenState extends State<MapScreen> {
   GoogleMapController? _controller;
   late CameraPosition kGooglePlex;
-  List<double> coordinates=[31,31];
+/*  List<double> coordinates=[31,31];
   Future<List<double>> getLocation() async {
     Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.low);
     print(position.latitude);
@@ -28,12 +28,12 @@ class _MapScreenState extends State<MapScreen> {
       coordinates=[position.latitude,position.longitude] ;
     });
     return coordinates;
-  }
+  }*/
   @override
   void initState() {
-    getLocation();
+  //  getLocation();
     kGooglePlex = CameraPosition(
-      target: LatLng(coordinates.first, coordinates.last),
+      target: LatLng(widget.latitude, widget.longitude),
       zoom: 10.4746,
     );
     super.initState();

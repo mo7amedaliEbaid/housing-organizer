@@ -24,6 +24,8 @@ class FirestoreMethods {
     required String beds,
     required String rooms,
     required String sqft,
+    required double latitude,
+    required double longitude,
   }) async {
     String res = "Some error occured";
     try {
@@ -51,7 +53,7 @@ class FirestoreMethods {
         overview: overview,
         price: price,
         rooms: rooms,
-        sqft: sqft,
+        sqft: sqft, latitude: latitude, longitude: longitude,
       );
       _firebaseFirestore.collection("posts").doc(postId).set(userPost.toJson());
       res = "success";

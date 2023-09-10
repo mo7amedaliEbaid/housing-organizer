@@ -13,7 +13,6 @@ import '../../../widgets/default.dart';
 import '../../../widgets/imagepicker.dart';
 import '../../../widgets/validator.dart';
 
-
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
 
@@ -29,6 +28,8 @@ class _BodyState extends State<Body> {
   TextEditingController _userBedsController = TextEditingController();
   TextEditingController _userRoomsController = TextEditingController();
   TextEditingController _userSQrtController = TextEditingController();
+  TextEditingController _latitudeController = TextEditingController();
+  TextEditingController _longitudeController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
 
   double priceRangeValue = 0;
@@ -37,9 +38,11 @@ class _BodyState extends State<Body> {
   Uint8List? _file;
 
   bool _isloading = false;
+
 // for adding post
   String _houseType = "house";
   String _houseStatus = "For Sale";
+
   void addPost({
     required final uid,
     required final userName,
@@ -65,6 +68,8 @@ class _BodyState extends State<Body> {
         sqft: _userSQrtController.text,
         contactNumber: contactNumber,
         email: email,
+        latitude: double.parse(_latitudeController.text),
+        longitude: double.parse(_longitudeController.text),
       );
       if (res == "success") {
         setState(() {
@@ -95,6 +100,8 @@ class _BodyState extends State<Body> {
       _userPriceController.text = "";
       _userRoomsController.text = "";
       _userSQrtController.text = "";
+      _latitudeController.text = "";
+      _longitudeController.text = "";
     });
   }
 
@@ -108,6 +115,8 @@ class _BodyState extends State<Body> {
     _userPriceController.dispose();
     _userSQrtController.dispose();
     _userTitleController.dispose();
+    _latitudeController.dispose();
+    _longitudeController.dispose();
   }
 
   @override
@@ -299,7 +308,8 @@ class _BodyState extends State<Body> {
                   keyboardType: TextInputType.text,
                   controller: _userOverViewController,
 
-                  maxLines: 8, //or null
+                  maxLines: 8,
+                  //or null
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
                         gapPadding: 4,
@@ -313,7 +323,6 @@ class _BodyState extends State<Body> {
                 SizedBox(
                   height: 16.h,
                 ),
-
                 TextFormField(
                   textInputAction: TextInputAction.next,
                   validator: requiredField,
@@ -350,6 +359,26 @@ class _BodyState extends State<Body> {
                   controller: _userSQrtController,
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(hintText: "Sqft"),
+                ),
+                SizedBox(
+                  height: 16.h,
+                ),
+                TextFormField(
+                  validator: requiredField,
+                  textInputAction: TextInputAction.next,
+                  controller: _latitudeController,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(hintText: "Latitude"),
+                ),
+                SizedBox(
+                  height: 16.h,
+                ),
+                TextFormField(
+                  validator: requiredField,
+                  textInputAction: TextInputAction.next,
+                  controller: _longitudeController,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(hintText: "Longitude"),
                 ),
                 SizedBox(
                   height: 16.h,

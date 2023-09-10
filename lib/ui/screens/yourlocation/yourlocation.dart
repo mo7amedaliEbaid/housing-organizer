@@ -21,10 +21,20 @@ class _GeolocatorWidgetState extends State<GeolocatorWidget> {
   StreamSubscription<Position>? _positionStreamSubscription;
   StreamSubscription<ServiceStatus>? _serviceStatusStreamSubscription;
   bool positionStreamStarted = false;
-
+  late List<double> coordinates;
+  Future<List<double>> getLocation() async {
+    Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.low);
+    print(position.latitude);
+    print(position.longitude);
+    setState(() {
+      coordinates=[position.latitude,position.longitude] ;
+    });
+    return coordinates;
+  }
   @override
   void initState() {
     super.initState();
+    getLocation();
     _toggleServiceStatusStream();
   }
 
@@ -99,7 +109,7 @@ class _GeolocatorWidgetState extends State<GeolocatorWidget> {
           FloatingActionButton(
             child: const Icon(Icons.map),
             onPressed: (){
-              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MapScreen(/*latitude:31, longitude: 31*/)));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MapScreen(latitude:coordinates.first, longitude: coordinates.last)));
             },
           ),
         ],
